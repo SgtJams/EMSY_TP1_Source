@@ -59,20 +59,20 @@ Shell Linux :
 
 Q1. disposition du clavier américain ?
 
-> votre réponse ?!
+> QWERTY
 
 Q2. disposition du clavier suisse-romand ?
 
-> votre réponse ?!
+> QWERTZ
 
 Q3. disposition du le clavier français ? 
 
-> votre réponse ?!
+> AZERTY
 
 
 H. Déplacez-vous à la **racine du système** en utilisant la commande suivante : `cd` 
 
-> vore commande ?!
+> cd /
 
 I. Affichez le contenu de la racine avec la commande : `ls –l`	
 
@@ -80,35 +80,46 @@ I. Affichez le contenu de la racine avec la commande : `ls –l`
 
 Q5. Que signifie l'option `-l` avec la commande `ls` 
 
-> votre réponse ?!
+> c'est le format long de la commande ls, elle affiche les informations pour chaque fichier ou répertoire.
 
 Q6. Décrypter la ligne où se trouve le répertoire **home**    
 
 [Placer votre capture d'écran]()
 
-> votre réponse ?!
+> d = indicateur de type de fichier la on se trouve dans le répertoire
+> rwx = privilège que peux avoir l'utilisateur sur ce répertoire, ici on peut lire(r) écrire(w) executer(x)
+> r-x = privilège que le groupe peut avoir sur ce répertoire, ici on peut lire(r) impossible d'écrire(-) executer(x)
+> r-x = privilège qu'un utilisateur partagé peut avoir su ce répertoire, ici on peut lire(r) impossible d'écrire(-) executer(x)
+> 1 = Le nbr d'accès
+> root = racine utilisateur
+> root = racine groupe
+> 60 = espace mémoire utilisée 60 Mo
+> Sep 18 = date du dernier acces ou modif de ce répertoire, ici c'est le 18 Septembre
+> 14:04 = heure selon la date du dernier acces ou modif de ce répertoire, ici c'est à 14H04
+> home = nom du répertoire
 
 J. Créez un répertoire de travail nommé « EMSY_VosInitiales» dans quel dossier racine allez-vous le placer (justifiez votre réponse) et quelle commande allez-vous utiliser. 
 
-> votre commande ?! 
+> Dans le dossier home/live car on peut facilement y accéder et on arrive dessus lors du lancement de la machine virtuel.
+> On utilise la commande "mkdir EMSY_SPY-AOD"
 
 Q7. Si vous créez un répertoire de travail (pour éditer/sauvegarder des fichiers), dans quelle **répertoire racine** vous vous placez ? 
 
-> votre réponse ?!
+> On le mettrait dans un répertoire qui n'est pas sensible à des erreurs de commande ou des suppressions telle le répertoire "home"
 
 
 K. Dans ce répertoire, créez un fichier texte que vous nommerez `TESTSLO_XXX_XXX` et éditez celui en écrivant un texte, exemple : "TP linux by XXX et XXX".
 	Utiliser la commande `vi`
 
-> votre commande ?! 
+> vi TESTSLO_SPY_AOD.txt 
 
 Q9. dans le répertoire `/home`, pouvez-vous éditez un fichier uniquement avec la commande `vi` 
 
-> votre réponse ?!
+> il faut ajouter le format du fichier ".txt" à la suite du nom.
 
 Q10. Si vous éteignez la machine virtuelle et que vous la rallumez, est-ce que le répertoire créé ci-dessus existe toujours (justifiez votre réponse) ? 
 
-> votre réponse ?!
+> Non, car la machine virtuel est réinitialisé à son arret.
 
 L. Tapez la commande `ls -l /dev/sda` 
 
@@ -116,12 +127,20 @@ L. Tapez la commande `ls -l /dev/sda`
 
 Q11. Que signifie **sda** ? 
 
-> votre réponse ?!
+> C'est la désignation actuelle pour désigner les disque dur, lors de l'installation linux donne le nom de sda au 1er disque dur.
 
 Q12. Décrypter la réponse après avoir taper la commande `ls -l /dev/sda` -> voir résultat point 13.
 
-> votre réponse ?!
-
+> brw-rw----1 root disk 8,0 Sep 24 15:56 dev/sda
+> b = indicateur de type de fichier la on se trouve dans le fichier bloc
+> rw- = privilège que peux avoir l'utilisateur sur ce répertoire, ici on peut lire(r) écrire(w) impossible d'executer(-)
+> rw- = privilège que le groupe peut avoir sur ce répertoire, ici on peut lire(r) écrire(w) impossible d'executer(-)
+> --- = privilège qu'un utilisateur partagé peut avoir su ce répertoire, ici il est impossible de lire(-) impossible d'écrire(-) impossible executer(-)
+> 1 = Le nbr d'accès.
+> root = racine utilisateur.
+> disk = block SCSI.
+> 8 = numéro majeur, il indique le pilote utilisé gérer le matériel.
+> 0 = numéro mineur, il est donné par le pilote pour distingué le matériel qu'il contrôle.
 
 ## Tips 
 
