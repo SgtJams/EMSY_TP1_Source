@@ -1,4 +1,4 @@
-# TP1 - Installation Linux sur une VM - V0.1
+# TP1 - Installation Linux sur une VM - V0.2
 
 ## Groupe 
 
@@ -49,11 +49,11 @@ H. Lancez la machine virtuelle : **Play virtual machine**
 
 G. Lancement du live CD : 
 
-[Placer votre capture d'écran]() 
+![Lancement_du_live_CD](/Images/Lancement_du_live_CD.png) 
 
 Shell Linux : 
 
-[Placer votre capture d'écran]() 
+![Shell_Linux](/Images/Shell_Linux.png) 
 
 > **ATTENTION** : par défaut, le clavier est configuré est **Clavier Americain**
 
@@ -76,7 +76,7 @@ H. Déplacez-vous à la **racine du système** en utilisant la commande suivante
 
 I. Affichez le contenu de la racine avec la commande : `ls –l`	
 
-![Placer votre capture d'écran]() 
+![Contenu_racine](/Images/Contenu_racine.png) 
 
 Q5. Que signifie l'option `-l` avec la commande `ls` 
 
@@ -84,7 +84,7 @@ Q5. Que signifie l'option `-l` avec la commande `ls`
 
 Q6. Décrypter la ligne où se trouve le répertoire **home**    
 
-[Placer votre capture d'écran]()
+![Description_repertoire_ligne_home](/Images/Description_repertoire_ligne_home.png)
 
 > d = indicateur de type de fichier la on se trouve dans le répertoire
 > rwx = privilège que peux avoir l'utilisateur sur ce répertoire, ici on peut lire(r) écrire(w) executer(x)
@@ -123,7 +123,7 @@ Q10. Si vous éteignez la machine virtuelle et que vous la rallumez, est-ce que 
 
 L. Tapez la commande `ls -l /dev/sda` 
 
-![Placer votre capture d'écran]() 
+![Commande_ls-l_dev_sda](/Images/Commande_ls-l_dev_sda.png) 
 
 Q11. Que signifie **sda** ? 
 
