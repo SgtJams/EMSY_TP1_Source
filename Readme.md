@@ -168,6 +168,111 @@ Q12. Décrypter la réponse après avoir taper la commande `ls -l /dev/sda` -> v
 
 > /dev/sda = c'est notre disque dur.
 
+M.Installer la distribution Sparky (linux) sur le disque de la VM.
+
+![code pour installer la disdribution sparky linux](/Images/code pour installer la disdribution sparky linux.png)
+
+Q13. Quelle est la taille de disque minimum recommandée pour instaler la distribution Sparky?
+
+> Elle est de 2 Go
+
+>Durant l'instalation, il s'agit de créer 3 partitions primaires:
+
+>Partition 1: env.50% du disque (~10Go) -> Système de fichiers Linux
+>Partition 2: env.25% du disque (~5Go) -> Partition d'échange (swap)
+>Partition 3: le reste sera utilisé pour un système de fichiers dans un format Linux
+
+Q14. A quoi sert la partition swap? Est-ce que ce principe existe sur les OS Microsoft Windows?
+ 
+>C'est en quelque sorte un espace sur le disque ROM qui est utilisé comme une extension de RAM, il va donc permettre de libérer la RAM en déplacent les données dans la swap.
+>Oui, il existe un principe de swap sur les OS Microsoft Windows.
+ 
+Q15. Quel format pourriez-vous utiliser pour la 3eme partition afin qu'elle soit également accessible depuis un OS Microsoft?
+
+> Le format exFAT
+ 
+Q16. Durant l'installation, on vous demande deux noms d'utilisateur. A quoi correspondent-ils?
+ 
+> Ils correspondent au nom de la machine(hostname) et au nom de l'utilisateur
+ 
+N. Après l'installation de Linux, prenez une capture d'écran du démarrage de votre systéme (GRUB)
+ 
+![Demarage_GRUB](/Images/Demarage_GRUB.jpg)
+ 
+O. Trouvez la ou les lignes de commande permettant de changer le clavier (clavier suisse romand trouvable sous "German (Switzerland)" et procédez à la configuration du clavier.
+ 
+>sudo loadkeys fr_CH-latin1 //Permet de changer temporairement le clavier en romand, jusqu'à la fermeture de l'OS.
+>sudo dpkg-reconfigure keyboard-configuration // permet de chosir le clavier de manière fixe.
+![Configuration clavier](/Images/Configuration clavier.png)
+>sudo service keyboard-setup restart //permet de confirmer le choix en le restartant.
+ 
+P. Testez si l'application "nano" est installée sur votre machine, tapez la commande: nano -version
+>Non il n'étais pas installer, il a été installer par la suite.
+>La commande: nano -version ne marche pas cependant la commande: nano --version fonctionne.
+![Chercher_nano](/Images/Chercher_nano.png)
+Q17. À quoi sert "nano?
+ 
+> C'est un éditeur de texte qui permet d'ouvrir et de modifier des fichies .txt, il peut aussi éditer des texts en ligne de commande.
+ 
+Q. Testez si l'application "git" est installée sur votre distribution, si ce n'est pas le cas installez un client git.
+ 
+Q18. Comment savoir si "git" est déjà installé?
+ 
+> apt list --installed | grep git
+
+Q19. Quelle(s) commande(s) utilisez-vous pour l'installer?
+ 
+> sudo apt install git-all
+ 
+Q20. Que veut dire "apt"?
+ 
+>Advanced Package Tool,C'est le gestionnaire de paquets avec une interface utilisateur de  haut niveau.
+ 
+Q21. Est-ce que cette commande peut être utilisée sur toutes les distributions Linux?
+ 
+>Non,je ne pense pas que la distribution Debian 2.0 ne puisse l'utiliser.
+ 
+R. Créez un sous-répertoire "EMSY_TP1_XXX-YYY" dans le répertoire de votre utilisateur.
+ATTENTION: Ici on veut que l'utilisateur (vous) ait les droits de lecture, d'écriture et d'exécution.
+ 
+Q22. Quel est le répertoire utilisateur?
+
+>/home/SPY
+ 
+Q23. Quelles sont les commandes que vous allez utiliser?
+ 
+>1) sudo mkdir EMSY_TP1_SPY-AOD //On crée le sous répertoire
+>2) chmod 700 EMSY_TP1_SPY-AOD // On défini les droits seulement pour l'utilisateur.
+ 
+S. Dans ce répertoire, tapez la commande:
+git clone https://github.com/votreDepot/EMSY_TP1_Source
+Il faut préalable que vous ayez mis en place à cette adresse un fork du dépôt fourni.
+ 
+Q24. Qu'observez-vous dans votre répertoire?
+ 
+> 
+ 
+T. Editez le fichier source .c avec l'éditeur de texte "nano".
+Réalisez un petit programme en C (par exemple de type "Hello world")
+ 
+U. Vérifiez si le compilateur "gcc" est bien installé.
+Notez la version du logiciel.
+Tapez les commandes suivantes:
+gcc -Wall -o fichier.o -c fichier.c
+gcc -o fichier fichier.o
+REMARQUE: "fichier" est à remplacer par le nom de votre choix
+ 
+Q25. Quels sont les fichiers qui ont été générés?
+ 
+> 
+ 
+V. Entrez la commande suivante:
+./fichier
+ 
+Q26. Que se passe-t-il?
+
+>
+
 ## Tips 
 
 > $$Tips^1$$ : sortir de la VM -> appuyer simultanément sur `Ctrl` et `Alt` 
@@ -179,4 +284,3 @@ Q12. Décrypter la réponse après avoir taper la commande `ls -l /dev/sda` -> v
 > $$Tips^4$$ : [commande vi avec ses options](https://www.linuxtricks.fr/wiki/guide-de-sur-vi-utilisation-de-vi)
 
 > $$Tips^5$$ : [éditer un fichier type markdown (.md)](https://ashki23.github.io/markdown-latex.html)
-
