@@ -80,7 +80,7 @@ I. Affichez le contenu de la racine avec la commande : `ls –l`
 
 Q5. Que signifie l'option `-l` avec la commande `ls` 
 
-> Elle permet de donner les détails du fichier ou répertoire ou l'on se trouve.
+> Elle permet de donner les détails du fichier ou répertoire ou l'on se trouve sous le format d'une liste
 
 Q6. Décrypter la ligne où se trouve le répertoire **home**    
 
@@ -158,7 +158,7 @@ Q12. Décrypter la réponse après avoir taper la commande `ls -l /dev/sda` -> v
 
 > disk = block SCSI.
 
-> 8 = numéro majeur, il indique le pilote utilisé gérer le matériel.
+> 8 = numéro majeur, il indique le pilote utilisé pour gérer le matériel.
 
 > 0 = numéro mineur, il est donné par le pilote pour distingué le matériel qu'il contrôle.
 
@@ -248,28 +248,44 @@ S. Dans ce répertoire, tapez la commande:
 git clone https://github.com/votreDepot/EMSY_TP1_Source
 Il faut préalable que vous ayez mis en place à cette adresse un fork du dépôt fourni.
  
-Q24. Qu'observez-vous dans votre répertoire?
+Q2l. Qu'observez-vous dans votre répertoire?
  
-> 
+> On observe bien notre dépot avec les divers fichier y figurant.
+
+![Repertoire_git](/Repertoire_git.png) 
  
 T. Editez le fichier source .c avec l'éditeur de texte "nano".
 Réalisez un petit programme en C (par exemple de type "Hello world")
  
+![Texte_nano](/Texte_nanogc.png) 
+ 
 U. Vérifiez si le compilateur "gcc" est bien installé.
 Notez la version du logiciel.
+
+>commande: "apt list installed gcc" //pour vérifier si le compilateur est bien installé.
+> version: 4:10.2.1-1 amd64
+
 Tapez les commandes suivantes:
-gcc -Wall -o fichier.o -c fichier.c
-gcc -o fichier fichier.o
+gcc -Wall -o Testo.o -c EMSY_TP1.c
+gcc -o EMSY_TP1 Testo.o
 REMARQUE: "fichier" est à remplacer par le nom de votre choix
  
 Q25. Quels sont les fichiers qui ont été générés?
  
-> 
+![fichier_Testo](/fichier_Testo.png)
+ 
+> Ce sont les fichiers:
+> Testo.o // c'est le code en assembleur du fichier EMSY_TP1.c
+> EMSY_TP1 // c'est le fichier Testo.o qui à été tansformé en executable.
  
 V. Entrez la commande suivante:
 ./fichier
  
 Q26. Que se passe-t-il?
+
+![affichage_Hello_World](/affichage_Hello_World.png)
+
+le petit programme s'execute et afiche. 
 
 >
 
